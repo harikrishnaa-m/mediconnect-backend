@@ -39,8 +39,8 @@ exports.makepayment = async (req, res) => {
       payment_method_types: ["card"],
       mode: "payment",
       line_items,
-      success_url: "http://localhost:5173/psuccess",
-      cancel_url: "http://localhost:5173/pfailure",
+      success_url: "https://mediconnect-frontend-vory.vercel.app/psuccess",
+      cancel_url: "https://mediconnect-frontend-vory.vercel.app/pfailure",
     });
     res.status(200).json({ url: session.url });
   } catch (err) {
